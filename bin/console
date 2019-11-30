@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "i18nable"
+
+require "pry"
+Pry.start

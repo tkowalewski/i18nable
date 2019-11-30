@@ -1,0 +1,2 @@
+class BClass < AClass
+end
