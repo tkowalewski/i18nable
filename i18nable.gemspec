@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.files         = Dir['CHANGELOG.md', 'CODE_OF_CONDUCT.md', 'LICENSE.txt', 'README.md', 'lib/**/*']
   spec.require_paths = ['lib']
   spec.add_runtime_dependency 'i18n'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.5.0'
   spec.add_development_dependency 'rubocop', '>= 0.49.0'
   spec.add_development_dependency 'pry', '~> 0.10.4'
