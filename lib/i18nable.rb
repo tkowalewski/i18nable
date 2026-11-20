@@ -5,7 +5,7 @@ require 'i18nable/key_builder'
 module I18nable
   def self.included(base)
     base.extend ClassMethods
-    base.send :include, InstanceMethods
+    base.include InstanceMethods
   end
 
   module InstanceMethods

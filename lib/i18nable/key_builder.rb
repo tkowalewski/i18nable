@@ -7,7 +7,7 @@ module I18nable
     def build(key)
       return key unless key.is_a?(String) && scopable?(key)
 
-      scope.concat key
+      "#{scope}#{key}"
     end
 
     private
@@ -21,7 +21,10 @@ module I18nable
     end
 
     def class_name
-      underscore @base_class.name
+      name = @base_class.name
+      raise ArgumentError, 'I18nable cannot build keys for anonymous classes' if name.nil?
+
+      underscore name
     end
 
     def underscore(key)

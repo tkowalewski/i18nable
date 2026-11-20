@@ -26,6 +26,13 @@ RSpec.describe I18nable::KeyBuilder do
       end
     end
 
+    context 'when class is anonymous' do
+      let(:name) { nil }
+      let(:key) { '.key' }
+
+      it { expect { key_builder.build(key) }.to raise_error(ArgumentError, /anonymous/) }
+    end
+
     context 'when class name is' do
       let(:key) { '.key' }
 
