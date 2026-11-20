@@ -1,11 +1,11 @@
 RSpec.describe AClass do
   subject { described_class.new }
 
-  it { is_expected.to respond_to(:translate).with(1..2).arguments }
-  it { is_expected.to respond_to(:localize).with_unlimited_arguments }
+  it { is_expected.to respond_to(:translate).with(1).argument.and_any_keywords }
+  it { is_expected.to respond_to(:localize).with(1).argument.and_any_keywords }
 
-  it { expect(AClass).to respond_to(:translate).with(1..2).arguments }
-  it { expect(AClass).to respond_to(:localize).with_unlimited_arguments }
+  it { expect(AClass).to respond_to(:translate).with(1).argument.and_any_keywords }
+  it { expect(AClass).to respond_to(:localize).with(1).argument.and_any_keywords }
 
   it { expect(I18n.locale).to eq :en }
   it { expect(subject.translate(:fake)).to eq 'fake' }

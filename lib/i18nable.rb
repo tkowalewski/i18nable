@@ -9,22 +9,22 @@ module I18nable
   end
 
   module InstanceMethods
-    def translate(key, options = {})
-      self.class.translate(key, options)
+    def translate(key, **options)
+      self.class.translate(key, **options)
     end
 
-    def localize(*args)
-      self.class.localize(*args)
+    def localize(object, **options)
+      self.class.localize(object, **options)
     end
   end
 
   module ClassMethods
-    def translate(key, options = {})
-      I18n.translate(i18nable_key_builder.build(key), options)
+    def translate(key, **options)
+      I18n.translate(i18nable_key_builder.build(key), **options)
     end
 
-    def localize(*args)
-      I18n.localize(*args)
+    def localize(object, **options)
+      I18n.localize(object, **options)
     end
 
     private
