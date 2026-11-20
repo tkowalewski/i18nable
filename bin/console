@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
-require "i18nable"
+require 'bundler/setup'
+require 'i18nable'
+require 'irb'
 
-require "pry"
-Pry.start
+IRB.start(__FILE__)
