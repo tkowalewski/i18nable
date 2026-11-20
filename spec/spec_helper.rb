@@ -1,3 +1,4 @@
+require 'date'
 require 'i18nable'
 
 Dir[File.join(__dir__, 'support/**/*.rb')].each { |f| require f }
