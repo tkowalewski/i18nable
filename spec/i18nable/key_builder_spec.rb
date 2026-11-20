@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe I18nable::KeyBuilder do
+RSpec.describe I18nable::KeyBuilder do
   let(:key_builder) { described_class.new base_class }
   let(:base_class) { double('Class', name: name) }
   let(:name) { 'Class' }
